@@ -22,7 +22,7 @@ namespace Kursach
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
         {
-            optionsBuilder.UseSqlite("Data Source=C:\\Users\\macar\\source\\repos\\Kursach\\Kursach\\Fishing.db");
+            optionsBuilder.UseSqlite("Data Source=C:Fishing.db");
         }
     }
 }
