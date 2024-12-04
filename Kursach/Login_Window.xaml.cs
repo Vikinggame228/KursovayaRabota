@@ -27,7 +27,6 @@ namespace Kursach
             InitializeComponent();
             //string? appPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             //string imagePath = System.IO.Path.Combine(appPath!, "Login_w.png");
-            //  прикрутить объект user к окну, чтобы работал Bindig
             DataContext = _userModel;
         }
 
@@ -65,18 +64,11 @@ namespace Kursach
         {
             using var db = new ApplicationContext();
 
-            //  пример: ищем в бд всех пользователей, имя которых содержит искомый текст
             var usersFound = db.Users;
-                //.Where(x => x.Name!.Contains(_userModel.Name!))
-               // .ToList();  //  ToList() - именно в ЭТОТ момент ef core выполняет запрос и подгружает данные в приложение из БД
-                            //  "материализовать" созданный запрос
-
-            //  взять у каждого пользователя только его имя, получить список имён
-            //  а вообще Select - это "преобразовать" одно в другое
+                .Where(x => x.Name!.Contains(_userModel.Name!))
+                .ToList();
             var usersFoundString = usersFound.Select(x => x.Name).ToList();
-            //  объединить список имён в одну строку, разделенную переносом строки
             var usersFounsMessage = string.Join("\n", usersFoundString);
-
             MessageBox.Show($"Users found:\n{usersFounsMessage}");
         }
 
