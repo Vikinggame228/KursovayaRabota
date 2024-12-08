@@ -46,5 +46,11 @@ namespace Kursach
             Close();
             main.Show();
         }
+
+        private void Check_base(object sender, RoutedEventArgs e)
+        {
+            var collection = new ObsCollection("inventory");
+            collection.Show();
+        }
     }
 }

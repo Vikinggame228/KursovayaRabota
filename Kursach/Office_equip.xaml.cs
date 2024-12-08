@@ -46,5 +46,12 @@ namespace Kursach
             Close();
             main_w.Show();
         }
+
+        private void Check_base(object sender, RoutedEventArgs e)
+        {
+            var collection = new ObsCollection("office_equip");
+
+            collection.Show();
+        }
     }
 }

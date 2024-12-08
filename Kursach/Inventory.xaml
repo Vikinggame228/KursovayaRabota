@@ -37,5 +37,6 @@
 
         <Button Content="Add" FontSize="20" Grid.Column="2" Margin="0,137,317,0" Grid.RowSpan="2" Grid.Row="6" Grid.ColumnSpan="2" Click="Button_Click"/>
         <Button Content="Close" FontSize="20" Grid.Column="3" Margin="0,137,0,0" Grid.RowSpan="2" Grid.Row="6" Click="Button_Click_1"/>
+        <Button Margin="0,106,0,8" FontSize="20" Grid.Column="3" Grid.Row="5" Content="Check Base" Click="Check_base" Grid.RowSpan="2"/>
     </Grid>
 </Window>

@@ -65,8 +65,8 @@ namespace Kursach
             using var db = new ApplicationContext();
 
             var usersFound = db.Users;
-                .Where(x => x.Name!.Contains(_userModel.Name!))
-                .ToList();
+                //.Where(x => x.Name!.Contains(_userModel.Name!))
+                //.ToList();
             var usersFoundString = usersFound.Select(x => x.Name).ToList();
             var usersFounsMessage = string.Join("\n", usersFoundString);
             MessageBox.Show($"Users found:\n{usersFounsMessage}");

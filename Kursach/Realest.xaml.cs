@@ -48,5 +48,11 @@ namespace Kursach
             Close();
             mainw.Show();
         }
+
+        private void Check_base(object sender, RoutedEventArgs e)
+        {
+            var collection = new ObsCollection("realest");
+            collection.Show();
+        }
     }
 }
